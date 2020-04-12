@@ -35,7 +35,7 @@ namespace SoundTheAlarm {
                             ;
 
                             settlementToTrack = v.Settlement;
-                            InformationManager.ShowInquiry(new InquiryData("Sound The Alarm", display, true, true, "Track", "Close", new Action(Track), null, ""), true);
+                            InformationManager.ShowInquiry(new InquiryData("Sound The Alarm", display, true, true, "Track", "Close", new Action(Track), null, ""), STALibrary.Instance.STAConfiguration.PauseOnFiefPopup);
                             if (STALibrary.Instance.STAConfiguration.EnableDebugMessages)
                                 InformationManager.DisplayMessage(new InformationMessage("STALibrary: " + display, new Color(1.0f, 0.0f, 0.0f)));
                         }
@@ -69,7 +69,7 @@ namespace SoundTheAlarm {
                                 "!"
                             ;
                             settlementToTrack = e.BesiegedSettlement;
-                            InformationManager.ShowInquiry(new InquiryData("Sound The Alarm", display, true, true, "Track", "Close", new Action(Track), null, ""), true);
+                            InformationManager.ShowInquiry(new InquiryData("Sound The Alarm", display, true, true, "Track", "Close", new Action(Track), null, ""), STALibrary.Instance.STAConfiguration.PauseOnFiefPopup);
                             if (STALibrary.Instance.STAConfiguration.EnableDebugMessages)
                                 InformationManager.DisplayMessage(new InformationMessage("STALibrary: " + display, new Color(1.0f, 0.0f, 0.0f)));
                         }
@@ -96,7 +96,7 @@ namespace SoundTheAlarm {
                 " has signed a declaration of war against the " +
                 faction2.Name.ToString();
             ;
-            InformationManager.ShowInquiry(new InquiryData("Sound The Alarm", display, true, false, "Ok", "Close", null, null, ""), false);
+            InformationManager.ShowInquiry(new InquiryData("Sound The Alarm", display, true, false, "Ok", "Close", null, null, ""), STALibrary.Instance.STAConfiguration.PauseOnWarPeacePopup);
             if (STALibrary.Instance.STAConfiguration.EnableDebugMessages)
                 InformationManager.DisplayMessage(new InformationMessage("STALibrary: " + display, new Color(1.0f, 0.0f, 0.0f)));
         }
@@ -110,7 +110,7 @@ namespace SoundTheAlarm {
                 " has signed a declaration of peace with the " +
                 faction2.Name.ToString();
             ;
-            InformationManager.ShowInquiry(new InquiryData("Sound The Alarm", display, true, false, "Ok", "Close", null, null, ""), false);
+            InformationManager.ShowInquiry(new InquiryData("Sound The Alarm", display, true, false, "Ok", "Close", null, null, ""), STALibrary.Instance.STAConfiguration.PauseOnWarPeacePopup);
             if (STALibrary.Instance.STAConfiguration.EnableDebugMessages)
                 InformationManager.DisplayMessage(new InformationMessage("STALibrary: " + display, new Color(1.0f, 0.0f, 0.0f)));
         }

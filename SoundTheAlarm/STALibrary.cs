@@ -28,11 +28,17 @@ namespace SoundTheAlarm {
                         case "enablefiefpopup":
                             STAConfiguration.EnableFiefPopup = node.InnerText.ToBool();
                             break;
+                        case "pauseonfiefpopup":
+                            STAConfiguration.PauseOnFiefPopup = node.InnerText.ToBool();
+                            break;
                         case "enablewarpopup":
                             STAConfiguration.EnableWarPopup = node.InnerText.ToBool();
                             break;
                         case "enablepeacepopup":
                             STAConfiguration.EnablePeacePopup = node.InnerText.ToBool();
+                            break;
+                        case "pauseonwarpeacepopup":
+                            STAConfiguration.PauseOnWarPeacePopup = node.InnerText.ToBool();
                             break;
                         case "enabledebugmessages":
                             STAConfiguration.EnableDebugMessages = node.InnerText.ToBool();
